@@ -1,0 +1,282 @@
+.blog-block, .blog_entry {
+  .blog__image {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+  }
+
+  .blog-block-element {
+
+    margin: 15px;
+  }
+
+
+  .blog-block-element__image {
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    height: 200px;
+  }
+
+  .blog-block-element__image img {
+    max-height: 177px;
+  }
+
+
+  .blog-block-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f57656;
+    margin-bottom: 15px;
+  }
+
+  .blog-block-element__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #54b5f5;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .blog-block-element__text {
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    color: #46515c;
+
+    a {
+      color: #46515c;
+    }
+  }
+
+
+  .blog-block-element__date {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #46515c;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #dcdcdc;
+    max-width: 100px;
+  }
+
+  .blog-block-element {
+    width: 30%;
+  }
+
+  .blog-block-element--wide {
+    width: 60% !important;
+  }
+
+
+  .my-shuffle-container-1, .my-shuffle-container-2, .my-shuffle-containe3 {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blog-block-rows {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+
+  /*Shuffle.js block*/
+  /* quick grid */
+  .container {
+    width: 93%;
+    margin: auto;
+  }
+
+  /* Bootstrap-style columns */
+  .column {
+    position: relative;
+  }
+
+  .col-span {
+    width: 50%;
+  }
+
+  .my-sizer-element-1, .my-sizer-element-2, .my-sizer-element-3 {
+    width: 8.33333%;
+  }
+
+  /* default styles so shuffle doesn't have to set them (it will if they're missing) */
+  .my-shuffle {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Ensure images take up the same space when they load */
+  /* https://vestride.github.io/Shuffle/images */
+  .aspect {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    overflow: hidden;
+  }
+
+  .aspect__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .aspect--16x9 {
+    padding-bottom: 56.25%;
+  }
+
+  .aspect--9x80 {
+    padding-bottom: calc(112.5% + 8px);
+  }
+
+  .aspect--32x9 {
+    padding-bottom: calc(28.125% - 3px);
+  }
+
+  //
+  //img {
+  //  display: block;
+  //  width: 100%;
+  //
+  //  max-width: none;
+  //  height: 100%;
+  //  object-fit: cover;
+  //}
+  hr {
+    width: 130%;
+    margin-left: -15% !important;
+  }
+
+
+}
+
+
+/*blog entry*/
+.blog_entry__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.blog_entry__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #54b5f5;
+}
+
+.blog_entry__date {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
+  color: #3c4853;
+}
+
+.blog_entry__image {
+  min-height: 346px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 44px;
+}
+
+.blog_entry__content {
+  word-break: break-all;
+
+  p {
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+    color: #35414d;
+  }
+}
+
+.blog_entry__social__title {
+  height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #35414d;
+}
+
+.blog_entry__social__elements {
+  display: flex;
+  margin-bottom: 100px;
+
+  div {
+    margin: 15px;
+  }
+
+  div:first-child {
+    margin-left: 0;
+  }
+}
+
+.blog_entry__other-news {
+
+
+  .blog-block-title {
+    font-size: 24px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f57656;
+  }
+}
+
+.blog_entry__content {
+  ul {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.57;
+    color: #35414d;
+    margin-left: 30px !important;
+  }
+
+  ul > li {
+    text-indent: -5px;
+  }
+
+  ul > li:before {
+    content: "-";
+    text-indent: -5px;
+  }
+}
+
+.blog_entry__other-news {
+  background-color: #faf9f9;;
+  padding-top: 50px;
+  padding-bottom: 30px;
+}
+
+.blog-block-element {
+  min-height: 445px !important;
+}
+
+@media(max-width: 767px) {
+  .blog-block, .blog_entry {
+
+    .blog-block-element, .blog-block-element--wide {
+      width: 100% !important;
+    }
+
+    .blog-block-element__image {
+      width: 96%;
+    }
+    .blog-block-element {
+      min-height: 345px !important;
+    }
+  }
+}

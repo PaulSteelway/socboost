@@ -1,0 +1,216 @@
+[
+  {
+    "name": "id",
+    "dbType": "bigInteger,true,true",
+    "htmlType": null,
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "user_id",
+    "dbType": "string,36",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "currency_id",
+    "dbType": "string,36",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "type",
+    "dbType": "string",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "period",
+    "dbType": "integer,false,true",
+    "htmlType": null,
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "date_at",
+    "dbType": "date:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "packet_id",
+    "dbType": "integer,false,true",
+    "htmlType": null,
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "subscription_id",
+    "dbType": "string,16:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "status",
+    "dbType": "string",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "payment_method",
+    "dbType": "string,16",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "ip",
+    "dbType": "string,16",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "username",
+    "dbType": "string,64:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "posts",
+    "dbType": "integer,false,true",
+    "htmlType": null,
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "qty_min",
+    "dbType": "integer,false,true",
+    "htmlType": null,
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "qty_max",
+    "dbType": "integer,false,true",
+    "htmlType": null,
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "note",
+    "dbType": "text,65535:nullable",
+    "htmlType": "textarea",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "created_at",
+    "dbType": "datetime:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "datetime:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "type": "relation",
+    "relation": "mt1,Currency,currency_id"
+  },
+  {
+    "type": "relation",
+    "relation": "mt1,Packet,packet_id"
+  },
+  {
+    "type": "relation",
+    "relation": "mt1,User,user_id"
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,Order,subscription_id"
+  }
+]

@@ -1,0 +1,76 @@
+[
+  {
+    "name": "id",
+    "dbType": "bigInteger,true,true",
+    "htmlType": null,
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "user_id",
+    "dbType": "string,36",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "subject",
+    "dbType": "boolean",
+    "htmlType": "checkbox,1",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "status",
+    "dbType": "boolean",
+    "htmlType": "checkbox,1",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "updated_at",
+    "dbType": "datetime:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "created_at",
+    "dbType": "datetime:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "type": "relation",
+    "relation": "mt1,User,user_id"
+  },
+  {
+    "type": "relation",
+    "relation": "1tm,TicketMessage,ticket_id"
+  }
+]

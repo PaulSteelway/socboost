@@ -1,0 +1,11 @@
+User-agent: *
+Allow: */*.css
+Allow: */*.js
+Disallow: /lang/en
+Disallow: /auth/
+Disallow: */*?category=
+Disallow: /login
+Disallow: */*page=
+Disallow: /password/
+Disallow: */mailto
+Sitemap: https://socialbooster.me/sitemap.xml

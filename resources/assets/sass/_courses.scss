@@ -1,0 +1,370 @@
+.courses {
+  .app__btn {
+    min-width: 230px;
+  }
+  display: flex;
+  .courses__content-block {
+    width: 60%;
+  }
+  .courses__image-block {
+    //width: 35%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .courses-block__title, .courses-block__title--mobile {
+    font-size: 36px;
+    font-weight: 600;
+    color: #35414d;
+    margin: 140px 0 20px 0;
+  }
+
+  .courses-block__body {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    color: #35414d;
+  }
+
+  .courses-block__image {
+    height: 100%;
+    background-position: center;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .courses-block__actions {
+    margin: 35px 0 155px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .courses:nth-child(2), .courses:nth-child(4) {
+    .courses__content-block {
+      padding-left: 50px;
+    }
+  }
+  .courses-block__title--mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-block__image {
+    width: 348px;
+    height: 348px;
+
+  }
+  .courses-block__title--mobile {
+    font-size: 20px !important;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 !important;
+  }
+  .courses:nth-child(2) {
+    .courses-block__body {
+      padding-top: 20px;
+    }
+  }
+  .courses:nth-child(4) {
+    .courses__image-block {
+      margin-top: 25px;
+    }
+  }
+
+  .courses {
+    flex-wrap: wrap;
+
+    .courses-block__actions {
+      margin-bottom: 70px;
+    }
+
+
+    .courses__image-block {
+      order: 1;
+    }
+
+    .courses-block__title {
+      display: none;
+    }
+
+    .courses__content-block {
+      order: 2;
+    }
+
+    .courses__content-block, .courses__image-block {
+      width: 100% !important;
+    }
+  }
+}
+
+
+.courses-landing {
+  display: flex;
+
+  .courses__content-block {
+    margin-top: 140px;
+    width: 60%;
+  }
+
+  .courses-block__title {
+    font-size: 36px;
+    font-weight: 600;
+    color: #f67555;
+  }
+
+  .courses-block__body {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.71;
+    color: #35414d;
+  }
+
+  .app__btn--white {
+    margin-left: 10px;
+    padding: 0 40px;
+    min-width: unset;
+    width: unset;
+    color: #f67555;
+    background-color: white;
+  }
+}
+
+.courses-landing_plans {
+  .landing-plan__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 600;
+    color: #35414d;
+  }
+
+  .landing-plan__elements {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 135px;
+
+    .landing-plan__element {
+      margin-bottom: 140px;
+      position: relative;
+      margin-right: 45px;
+      width: 30%;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px 0 rgba(198, 198, 198, 0.5);
+      border: solid 1px #ffffff;
+      background-color: #faf7f7;
+
+      .subscribers_count {
+        padding-top: 30px;
+        background-color: white;
+        border: 10px solid rgba(84, 181, 245, 0.37);
+        border-radius: 100%;
+        width: 154px;
+        height: 154px;
+        position: absolute;
+        top: -75px;
+        left: calc(50% - 75px);
+        text-align: center;
+
+        .subscribers_count-label {
+          font-size: 14px;
+          font-weight: 300;
+          color: #252525;
+        }
+
+        .subscribers_count-qty {
+          font-size: 30px;
+          font-weight: 600;
+        }
+      }
+
+      .plan-price {
+        margin-top: 110px;
+        font-size: 24px;
+        font-weight: 600;
+        text-align: center;
+        background-color: #ffffff;
+        color: #54b5f5;
+      }
+
+      .plan-bullets {
+        ul {
+          margin-left: 40px;
+
+          li:before {
+            content: url("../images/courses/check.png");
+            margin-right: 20px;
+          }
+
+          li {
+            line-height: 35px;
+          }
+        }
+      }
+
+      .plan-actions {
+        text-align: center;
+        padding: 30px 0;
+
+        button {
+          width: 300px;
+          height: 50px;
+          border-radius: 25px;
+          background-color: #54b5f5;
+          color: #ffffff;
+          border: none;
+        }
+
+      }
+    }
+
+    .landing-plan__element:nth-child(3n+3) {
+      margin-right: 0;
+    }
+  }
+}
+
+.question-form-section {
+  border-radius: 20px;
+  color: #ffffff;
+  box-shadow: 0 4px 10px 0 rgba(198, 198, 198, 0.5);
+  background-color: #54b5f5;
+  text-align: center;
+  padding: 80px 0;
+
+  .question-form__title {
+    font-size: 36px;
+    font-weight: 600;
+  }
+
+  .question-form__info {
+    margin: auto;
+    max-width: 446px;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.38;
+  }
+
+  .modal-form__field {
+    margin: auto;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .modal-form__label {
+    color: #ffffff;
+  }
+
+  .question-form {
+    margin-top: 60px;
+  }
+
+  .question-form__actions {
+    button {
+      border-radius: 25px;
+      border: solid 1px #ffffff;
+      background-color: transparent;
+      color: #ffffff;
+      width: 300px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .course-landing {
+
+    .courses-landing {
+      display: flex;
+      flex-wrap: wrap;
+
+      .courses-block__title--mobile {
+        width: 100%;
+        text-align: center;
+        display: block;
+        font-size: 24px;
+        font-weight: 600;
+        color: #f67555;
+      }
+
+      .courses-block__title {
+        display: none;
+      }
+
+      .courses__content-block {
+        margin-top: 0;
+        width: 100%;
+        order: 2;
+      }
+
+      .courses__image-block {
+        width: 100%;
+        order: 1;
+      }
+
+      .courses-block__actions {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        button {
+          margin: auto;
+          margin-bottom: 10px;
+          width: 345px !important;
+          min-width: unset;
+          height: 50px;
+        }
+      }
+
+    }
+
+    .courses-landing_plans {
+      margin-top: 20px;
+
+      .landing-plan__elements {
+
+        flex-direction: column;
+
+        .landing-plan__element {
+          width: 340px;
+          min-width: 340px;
+          margin: auto !important;
+          margin-bottom: 100px !important;
+
+          button {
+            width: 300px;
+          }
+        }
+      }
+
+    }
+
+    .question-form-section {
+      .modal-form__field {
+        padding: 0 20px;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    button {
+      width: 345px;
+      min-width: unset;
+      height: 50px;
+    }
+
+    .courses-block__title--mobile {
+      margin-bottom: 40px !important;
+      font-size: 24px !important;
+    }
+  }
+
+}

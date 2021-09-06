@@ -1,0 +1,80 @@
+.social-select {
+  .selected,
+  li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .name {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0.5rem;
+      width: 10rem;
+      word-break: break-word;
+      line-height: 1.2;
+
+    }
+
+    img {
+      height: 3.5rem;
+      width: 3.5rem;
+      overflow: hidden;
+      border-radius: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  }
+
+  .other {
+    position: absolute;
+    background: $white;
+    top: 100%;
+    font-size: 14px;
+    width: 20rem;
+    border: 1px solid $gray-300;
+    overflow-y: auto;
+    max-height: 60vh;
+
+    li {
+      padding: 0.5rem;
+      justify-content: space-between;
+
+      &.disabled {
+        img {
+          cursor: no-drop;
+        }
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+
+      .active {
+        strong {
+          color: $primary;
+        }
+      }
+    }
+
+    .name {
+      flex: 1 0 auto;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: flex-end;
+      flex: 1 1 4rem;
+      width: 4rem;
+    }
+  }
+
+  .add-new {
+    display: flex;
+    flex-direction: column;
+
+    .add-new-block {
+      padding: 1rem 0 0;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+#phone-change-form .iti--allow-dropdown {
+    width: 100%;
+}
+
+.error {
+    border: solid 2px red;
+}
+
+#error-msg, #modal-error-msg {
+    color: red;
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+.modal-add-link {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(53, 65, 77, 0.8);
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    // #phoneCodeModal, #phoneChangeModal, #regOrderModal {
+    //     margin-top: 40%;
+    // }
+
+    .modal-add-link {
+        margin-top: 19px;
+    }
+}

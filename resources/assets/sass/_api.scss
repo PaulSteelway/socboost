@@ -1,0 +1,114 @@
+.api_docs {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.api__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.api__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #35414d;
+  margin-bottom: 0;
+}
+
+.api__container {
+  background: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5);
+  border: solid 1px #e8e8e8;
+  padding: 30px 24px 30px 20px;
+  margin-top: 20px;
+}
+
+.api_docs__main_condition_block {
+  padding-left: 5px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #35414d;
+}
+
+.api_docs__main_condition {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.api_response__container {
+  position: relative;
+  align-items: flex-start;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(196, 196, 196, 0.5);
+  background-color: #fafafa;
+  padding: 20px 20px 20px 20px;
+  margin-top: 10px;
+}
+
+.api_docs__params_title {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  color: #35414d;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.api_docs__params_desc {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  color: #35414d;
+  margin-bottom: 5px;
+}
+
+.api_docs__main_condition_title {
+  width: 30%;
+  font-weight: 500;
+}
+
+.api_docs__main_condition_desc {
+  width: 70%;
+}
+
+@media (max-width: 767px) {
+  .api__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .api__title {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .api__container {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  .api_docs__main_condition {
+    display: block;
+  }
+
+  .api_docs__main_condition_title, .api_docs__main_condition_desc {
+    width: 100%;
+  }
+}

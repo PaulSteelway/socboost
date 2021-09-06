@@ -1,0 +1,65 @@
+[
+  {
+    "name": "id",
+    "dbType": "string,36",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": true,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "referral_id",
+    "dbType": "string,36:nullable",
+    "htmlType": "text",
+    "validations": null,
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "link",
+    "dbType": "string,32",
+    "htmlType": "text",
+    "validations": "required",
+    "searchable": true,
+    "fillable": true,
+    "primary": false,
+    "inForm": true,
+    "inIndex": true
+  },
+  {
+    "name": "created_at",
+    "dbType": "datetime:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "datetime:nullable",
+    "htmlType": "date",
+    "validations": null,
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "type": "relation",
+    "relation": "mt1,User,id"
+  },
+  {
+    "type": "relation",
+    "relation": "mt1,User,referral_id"
+  }
+]

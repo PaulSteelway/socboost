@@ -1,0 +1,47 @@
+$scrollbar-size: 0.5rem !default;
+$scrollbar-size-textarea: 0.3rem !default;
+$bg-gray: $gray-500;
+$light-gray: $gray-300;
+$medium-gray: $gray-600;
+
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 $scrollbar-size rgba($light-gray,0.3);
+  background-color: $light-gray;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: $scrollbar-size;
+  height: $scrollbar-size;
+  background-color: $light-gray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $medium-gray;
+}
+
+select,
+textarea {
+  &::-webkit-scrollbar {
+    width: $scrollbar-size-textarea;
+    background-color: $bg-gray;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 $scrollbar-size-textarea rgba($bg-gray,0.3);
+    background-color: $bg-gray;
+  }
+}
+
+//.scroll-primary, etc
+@each $key, $value in $theme-colors {
+  .scroll-#{"" + $key} {
+    &::-webkit-scrollbar-thumb {
+      background-color: #{$value};
+    }
+  }
+}

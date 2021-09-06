@@ -1,0 +1,45 @@
+.free_promotion-admin {
+
+  @media (max-width: 768px) {
+
+    .header{
+      position: relative;
+    }
+    .header__container {
+      margin: 0 !important;
+    }
+    .header__login-container {
+      right: 20px;
+    }
+    .main-menu__list{
+      list-style: none;
+      padding-left: 20px;
+    }
+    .main-menu__link{
+      padding-left: 40px;
+    }
+    .main-menu__item:before{
+      content: '';
+    }
+    .main-menu__item{
+      position: relative;
+    }
+    .my-tasks:before, .job-exchange:before{
+      left: 0;
+      top: 25px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .free_promotion .header__login-link {
+    background-color: transparent !important;
+  }
+  .free_promotion{
+    width: 100%;
+    margin: auto;
+    .header__row{
+      width: 100%;
+    }
+  }
+
+}

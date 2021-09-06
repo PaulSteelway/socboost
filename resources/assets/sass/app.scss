@@ -1,0 +1,45 @@
+// Bootstrap
+@import "bootstrap";
+
+$font-mobile: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+
+//fix Montserrat mobile
+//костыль из-за кеша, потом убрать
+body {
+  @include media-breakpoint-down(sm) {
+    font-family: $font-mobile;
+  }
+}
+
+//fontawesome 5
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+//main
+@import "main/scrollbar";
+@import "main/helpers";
+@import "main/modal";
+
+//css
+@import "profile";
+@import "profile_refpage";
+@import "main";
+@import "blog";
+@import "referral_payout";
+@import "courses";
+@import "api";
+@import "registration";
+@import "free_promotion/main";
+@import "free_promotion/home";
+@import "free_promotion/social-select";
+
+
+//other
+@import "toastr";
+@import '~intl-tel-input/build/css/intlTelInput.css';
+@import '~jquery-ui/themes/base/all.css';
+
+
+//blocks
+@import "blocks/footer";
+@import "blocks/modals";
+@import "blocks/inform";

@@ -1,0 +1,78 @@
+.tasks__form-actions {
+  button {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 768px) {
+  .tasks {
+    select{
+      background: #faf8f8 !important;
+    }
+    h1{
+      text-align: center;
+    }
+    .create-task__field--social {
+      order: 1;
+    }
+
+    .create-task__field--category {
+      order: 2;
+    }
+
+    .create-task__field--title {
+
+    }
+
+    .create-task__field--description {
+
+    }
+
+    .create-task__field--link {
+      order: 3;
+    }
+
+    .create-task__field--category {
+
+    }
+
+    .create-task__field--reward {
+      order: 4;
+    }
+
+    .create-task__field--qty {
+      order: 5;
+    }
+
+    .create-task__field--comments {
+
+    }
+
+    .create-task__comment-info {
+      text-align: center;
+    }
+
+    .tasks__form-actions {
+      button {
+        width: 100%;
+        margin: 10px 0;
+        padding: 0;
+
+        min-width: 0 !important;
+      }
+      .button-submit:active, .button-submit:hover{
+        background-color: #3d9ad8;
+      }
+    }
+
+  }
+
+}
+
+.tasks__form-actions {
+  .button-submit:active, .button-submit:hover{
+    background-color: #3d9ad8;
+  }
+}
+.component__actions--submit:active, .component__actions--submit:hover{
+  background-color: #3d9ad8 !important;
+}

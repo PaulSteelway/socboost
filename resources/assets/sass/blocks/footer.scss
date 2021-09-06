@@ -1,0 +1,24 @@
+.change-lang {
+  display: block;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 24px;
+  animation: pulse_big 3s infinite;
+}
+
+.register-info {
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  .register-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}

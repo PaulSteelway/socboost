@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="15px" viewBox="0 0 22 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>tidal</title>
+    <desc>Created with Sketch.</desc>
+    <g id="desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icon" transform="translate(-569.000000, -548.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="tidal" transform="translate(569.000000, 548.000000)">
+                <polygon id="Rectangle" transform="translate(3.678889, 3.828259) rotate(-45.000000) translate(-3.678889, -3.828259) " points="1.08404198 1.23341258 6.2737358 1.23341258 6.2737358 6.4231064 1.08404198 6.4231064"></polygon>
+                <polygon id="Path" points="7.33333333 3.83589744 11 7.5025641 14.6666667 3.83589744 11 0.169230769"></polygon>
+                <polygon id="Path" points="7.33333333 11.1692308 11 14.8358974 14.6666667 11.1692308 11 7.5025641"></polygon>
+                <polygon id="Path" points="14.6666667 3.83589744 18.3333333 7.5025641 22 3.83589744 18.3333333 0.169230769"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

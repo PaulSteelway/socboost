@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  .card-container.tasks{
+    padding: 10px;
+    .tasks__filters{
+      flex-direction: column;
+    }
+    .tasks__filter{
+      margin: 0 10px;
+      max-width: unset;
+    }
+  }
+}
+
+.task-card {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 rgba(200, 200, 200, 0.5);
+  background-color: #faf8f8;
+
+  &__label, &__value {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.33;
+    color: #35414d;
+  }
+
+  &__value {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+}

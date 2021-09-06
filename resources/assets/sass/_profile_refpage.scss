@@ -1,0 +1,129 @@
+.premium_account {
+
+  .contact-block__name {
+    font-size: 24px;
+    font-weight: 600;
+    color: #f67555;
+  }
+
+.profile-link:hover{
+  color: #000000;
+}
+  .referral_field {
+    width: 95%;
+    padding: 0 10px;
+    height: 43px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px 0 rgba(198, 198, 198, 0.5);
+    border: solid 1px #ffffff;
+    background-color: #ffffff;
+  }
+
+  .referral_field__block{
+    padding-left: 0 !important;
+
+  }
+
+  .referral_field__block:hover{
+    cursor: pointer;
+  }
+  .referral_field__block::after{
+    content: url("../images/profile/copy.png");
+    position: absolute;
+    right: 0;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+  }
+  .feedbacks__link-icon{
+    margin-right: 20px;
+  }
+  .feedbacks__block{
+    float: left;
+    padding: 10px 0;
+    width: 100%;
+    justify-content: left;
+
+  }
+  .feedback__block{
+    margin-top: 30px;
+    .feedbacks__title{
+      text-align: left;
+      font-size: 16px;
+    }
+    .feedback__body{
+      display: flex;
+      flex-direction: row;
+      div{
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .profile_statistic__title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #3b4652;
+  }
+  .feedbacks__block-left{
+    width: 50%;
+  }
+  .feedbacks__block-name{
+    font-size: 14px;
+    font-weight: 500;
+    color: #35414d;
+  }
+  .profile_statistic{
+    .feedback_block{
+      display: flex;
+      flex-direction: row;
+      padding: 15px 0;
+    }
+    .feedback_block__text{
+      font-size: 14px;
+      font-weight: 500;
+      color: #35414d;
+      width: 65%;
+      img{
+        margin-right: 15px;
+      }
+    }
+    .feedback_block__res{
+      font-size: 14px;
+      font-weight: 600;
+      color: #54b5f5;
+    }
+  }
+}
+
+.premium_account {
+  min-height: 75vh;
+  background-size: cover;
+  background-image: url("../images/bg-profile.png");
+  background-repeat: no-repeat;
+
+}
+
+@media (max-width: 748px) {
+  .affiliate-program__img{
+    order:1;
+  }
+  .affiliate-program__col{
+    order:2;
+  }
+  .premium-profile__discounts-row{
+    flex-direction: column;
+  }
+  .premium-profile__discount{
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 10px auto !important;
+  }
+  .referral-block{
+    width: 95%;
+    margin: auto;
+  }
+  .profile_statistic{
+    margin-top: 40px;
+  }
+}
