@@ -63,7 +63,7 @@ class CategoryController extends Controller
      */
     public function convert(Request $request)
     {
-        $price = round(convertRubToUsd($request->get('price')), 4);
+        $price = round($request->get('price'), 4);
 
         return Response::json(['price' => $price]);
     }

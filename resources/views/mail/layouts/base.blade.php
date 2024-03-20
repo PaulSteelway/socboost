@@ -10,7 +10,7 @@
             </div>
 {{--            <div style="float:right;color:#35414d;font-weight:600;font-size:24px;display:flex;line-height:0.8;">--}}
 {{--                <span>socialb</span>--}}
-{{--                <span style="color:#f67555;font-size:40px;display:flex;line-height:0.4;">∞</span>--}}
+{{--                <span style="color:#B28F4B;font-size:40px;display:flex;line-height:0.4;">∞</span>--}}
 {{--                <span>ster</span>--}}
 {{--            </div>--}}
         </div>

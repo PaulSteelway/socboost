@@ -41,9 +41,9 @@ class UserReferralController extends AppBaseController
      */
     public function create(User $user)
     {
-        $referrals = User::where('id', '<>', $user->id)->get()->pluck('email', 'id');
+        // $referrals = User::where('id', '<>', $user->id)->get()->pluck('email', 'id');
 
-        return view('admin.user_referrals.create')->with('user', $user)->with('referrals', $referrals);
+        return view('admin.user_referrals.create')->with('user', $user);
     }
 
     /**
@@ -86,8 +86,8 @@ class UserReferralController extends AppBaseController
         }
 
         $referrals = User::where('id', '<>', $user->id)->get()->pluck('email', 'id');
-
-        return view('admin.user_referrals.edit')->with('userReferral', $userReferral)->with('referrals', $referrals);
+        return view('admin.user_referrals.edit')->with('userReferral', $userReferral);
+        // return view('admin.user_referrals.edit')->with('userReferral', $userReferral)->with('referrals', $referrals);
     }
 
     /**

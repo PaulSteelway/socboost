@@ -19,8 +19,8 @@
     @include('layouts.prod.gtag')
     @include('layouts.prod.yandex')
 
-    <link rel="stylesheet" type="text/css" href="{{ asset(mix('/css/app.css')) }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset(mix('/css/sprites.css')) }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset(mix('css/app.css')) }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset(mix('css/sprites.css')) }}">
     @include('layouts.meta.addition-top')
     @stack('styles')
   </head>

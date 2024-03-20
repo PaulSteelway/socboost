@@ -5,7 +5,7 @@
     </h2>
 
     <div class="subscribe__price">
-      {{__('From')}} {{ number_format(socialboosterPriceByAmount(1199), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }} / {{__('month')}}
+      {{__('From')}} {{ number_format(socialboosterPriceByAmount(1199), 2, '.', '') }} $ / {{__('month')}}
     </div>
 
     <div class="row subscribe__row">

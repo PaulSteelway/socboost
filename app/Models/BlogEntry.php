@@ -29,7 +29,7 @@ use Spatie\Sluggable\SlugOptions;
 class BlogEntry extends Model
 {
 
-    use HasSlug;
+    // use HasSlug;
 
 
     public $table = 'blog_entries';
@@ -109,12 +109,12 @@ class BlogEntry extends Model
     /**
      * Get the options for generating the slug.
      */
-    public function getSlugOptions() : SlugOptions
-    {
-        return SlugOptions::create()
-            ->generateSlugsFrom('title_ru')
-            ->saveSlugsTo('slug');
-    }
+    // public function getSlugOptions() : SlugOptions
+    // {
+    //     return SlugOptions::create()
+    //         ->generateSlugsFrom('title_ru')
+    //         ->saveSlugsTo('slug');
+    // }
 
     /**
      * Get the route key for the model.

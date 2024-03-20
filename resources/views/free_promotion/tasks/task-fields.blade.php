@@ -56,7 +56,7 @@
 {{--    <div>--}}
 {{--        <span>Итого</span>--}}
 {{--        <span id="total_sum">0</span>--}}
-{{--        <span>{{ app()->getLocale() == 'en' ? '$' : '₽' }}</span>--}}
+{{--        <span>$</span>--}}
 {{--    </div>--}}
     <span style="font-size: 12px">Комиссия биржи составляет - {{ config('tasks.commission') }}%, но не менее 1 балла за выполнение.</span>
 </div>

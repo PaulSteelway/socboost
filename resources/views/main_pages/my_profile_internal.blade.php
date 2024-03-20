@@ -68,7 +68,7 @@
                                         @if (isFreePromotionSite())
                                             {{ app()->getLocale() == 'en' ? 'Points' : getPointsName($wallet->balance) }}
                                         @else
-                                            {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                                            $
                                         @endif
                                         / {{__('Discount')}} {{ $user->getActiveWallet() ? $user->getActiveWallet()->getDiscount() : 0 }} %</div>
                                     </div>
@@ -76,7 +76,7 @@
                                 <div class="profile-info__discount">
                                     <div>{{__('Current discount')}}: {{ $user->getActiveWallet() ? $user->getActiveWallet()->getDiscount() : 0 }}%</div>
                                     <div class="profile-info__discount__text">{{__('In order to get a discount')}} {{$user->getActiveWallet() ? $user->getActiveWallet()->getNextDiscountPercent() : 0}}%
-                                        {{__('you have to top up your account on')}} {{$user->getActiveWallet() ? number_format(socialboosterPriceByAmount($user->getActiveWallet()->getNextDiscountAmount() - $user->getActiveWallet()->spend_amount), 2, '.', '') : 0}} {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                                        {{__('you have to top up your account on')}} {{$user->getActiveWallet() ? number_format(socialboosterPriceByAmount($user->getActiveWallet()->getNextDiscountAmount() - $user->getActiveWallet()->spend_amount), 2, '.', '') : 0}} $
                                     </div>
                                 </div>
                                 <div class="profile-slider__block">
@@ -97,14 +97,14 @@
 
 {{--                                        </div>--}}
 {{--                                        <div id="step3" class="progress-step">--}}
-{{--                                            <span class="progress-amount">{{$user->getActiveWallet() ?  number_format(socialboosterPriceByAmount($user->getActiveWallet()->spend_amount), 2, '.', '') : 0}} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</span>--}}
+{{--                                            <span class="progress-amount">{{$user->getActiveWallet() ?  number_format(socialboosterPriceByAmount($user->getActiveWallet()->spend_amount), 2, '.', '') : 0}} $</span>--}}
 {{--                                            <div class="progress__complete-step"></div>--}}
 {{--                                        </div>--}}
 
 {{--                                    </div>--}}
 {{--                                </div>--}}
                                 <div class="profile-info__discount__text--mobile">{{__('In order to get a discount')}} {{$user->getActiveWallet() ? $user->getActiveWallet()->getNextDiscountPercent() : 0}}%
-                                    {{__('you have to top up your account on')}} {{$user->getActiveWallet() ? number_format(socialboosterPriceByAmount($user->getActiveWallet()->getNextDiscountAmount() - $user->getActiveWallet()->spend_amount), 2, '.', '') : 0}} {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                                    {{__('you have to top up your account on')}} {{$user->getActiveWallet() ? number_format(socialboosterPriceByAmount($user->getActiveWallet()->getNextDiscountAmount() - $user->getActiveWallet()->spend_amount), 2, '.', '') : 0}} $
                                 </div>
                             </div>
                         </div>

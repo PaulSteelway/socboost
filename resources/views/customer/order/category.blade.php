@@ -329,7 +329,7 @@
                                         </div>
                                         <hr class="buy-with__item-hr">
                                         @if(isset($child_category->packets[0]))
-                                        <div class="buy-with__item-price">{{__('250 pcs.') . ' = ' .  number_format(socialboosterPriceByAmount($child_category->packets[0]->price * 250), 2, '.', '')}}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                                        <div class="buy-with__item-price">{{__('250 pcs.') . ' = ' .  number_format(socialboosterPriceByAmount($child_category->packets[0]->price * 250), 2, '.', '')}}$</div>
                                         @endif
                                         <a href="{{ route('order.category', $child_category['url']) }}" class="buy-with-acc__btn">{{__('Buy')}}</a>
                                     </div>

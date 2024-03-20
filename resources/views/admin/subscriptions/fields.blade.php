@@ -19,7 +19,7 @@
         <div class="form-group col-sm-4">
             {!! Form::label('status', 'Status') !!}
             <div>
-                <span class="label label-{{['new' => 'primary', 'active' => 'success', 'close' => 'default', 'error' => 'danger'][$subscription->status]}}"
+                <span class="label label-{{['New' => 'primary', 'Active' => 'success', 'close' => 'Default', 'Error' => 'danger','Cancelled' => 'default'][$subscription->status]}}"
                       style="font-size: 14px; font-weight: 600;">{{$subscription->status}}</span>
             </div>
         </div>

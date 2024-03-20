@@ -7,6 +7,7 @@ use App\Types\RefferalUserType;
 use Carbon\Carbon;
 use App\Notifications\ResetPassword as ResetPasswordNotification;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -28,263 +29,314 @@ use App\Mail\EmailAutoRegistration;
 class User extends Authenticatable
 {
 
-  use Notifiable, HasRoles, Uuids, Impersonate;
+    use Notifiable, HasRoles, Uuids, Impersonate;
 
-  const MAX_LOGIN_ATTEMPTS = 5;
-  const LOGIN_BLOCKING = 60;
+    const MAX_LOGIN_ATTEMPTS = 5;
+    const LOGIN_BLOCKING = 60;
 
-  public $incrementing = false;
-
-
-  protected $fillable = [
-    'name', 'lastname', 'telegram', 'email', 'login', 'password', 'my_id', 'partner_id', 'phone', 'skype',
-    'created_at', 'blockio_wallet_btc', 'blockio_wallet_ltc', 'blockio_wallet_doge', 'sex', 'city', 'country',
-    'longitude', 'latitude', 'email_verified_at', 'email_verification_sent', 'email_verification_hash',
-    'last_login', 'avatar', 'is_premium', 'discount_modal', 'api_key'
-  ];
-
-  protected $hidden = [
-    'password',
-    'remember_token',
-    'tfa_token'
-  ];
+    public $incrementing = false;
 
 
-  public function isVerifiedEmail() {
-    return (bool) $this->email_verified_at;
-  }
+    protected $fillable = [
+        'name',
+        'lastname',
+        'telegram',
+        'email',
+        'login',
+        'password',
+        'my_id',
+        'partner_id',
+        'phone',
+        'skype',
+        'created_at',
+        'blockio_wallet_btc',
+        'blockio_wallet_ltc',
+        'blockio_wallet_doge',
+        'sex',
+        'city',
+        'country',
+        'longitude',
+        'latitude',
+        'email_verified_at',
+        'email_verification_sent',
+        'email_verification_hash',
+        'last_login',
+        'avatar',
+        'is_premium',
+        'discount_modal',
+        'api_key'
+    ];
 
-  public function isMan() {
-    return (bool) $this->sex == 'man';
-  }
-
-  public function isWoman() {
-    return (bool) $this->sex == 'woman';
-  }
-
-
-  // Relations
-  public function transactions() {
-    return $this->hasMany('App\\Models\\Transaction', 'user_id');
-  }
-
-  public function userTaskActions() {
-    return $this->hasMany('App\\Models\\UserTasks\\UserTaskActions', 'user_id');
-  }
-
-  public function userTasks() {
-    return $this->hasMany('App\\Models\\UserTasks\\UserTasks', 'user_id');
-  }
-
-  public function wallets() {
-    return $this->hasMany('App\\Models\\Wallet', 'user_id');
-  }
-
-  public function userReferral() {
-    return $this->hasOne('App\\Models\\UserReferral', 'id');
-  }
-
-  public function userSocialProfile() {
-    return $this->hasOne('App\\Models\\UserSocialProfile', 'user_id');
-  }
-
-  public function telegramUser() {
-    return $this->hasMany('App\\Models\\Telegram\\TelegramUsers', 'user_id');
-  }
-
-  public function taskPropositions() {
-    return $this->hasMany('App\\Models\\UserTasks\\UserTaskPropositions', 'user_id');
-  }
-
-  public function socialMeta() {
-    return $this->hasMany('App\\Models\\UsersSocialMeta', 'user_id');
-  }
-
-  public function youtubeVideoWatches() {
-    return $this->hasMany('App\\Models\\Youtube\\YoutubeVideoWatch', 'user_id');
-  }
-
-  public function deposits() {
-    return $this->hasMany('App\\Models\\Deposit', 'user_id');
-  }
-
-  public function user_ips() {
-    return $this->hasMany('App\\Models\\UserIp', 'user_id');
-  }
-
-  public function mailSents() {
-    return $this->hasMany('App\\Models\\MailSent', 'user_id');
-  }
-
-  public function orders() {
-    return $this->hasMany('App\\Models\\Order', 'user_id', 'id')
-      ->orderBy('created_at', 'desc');
-  }
-
-  public function newOrders() {
-    return $this->hasMany('App\\Models\\Order', 'user_id', 'id')
-      ->where(function($q) {
-        return $q->whereNotNull('jap_status')
-          ->orWhereNotNull('product_id');
-      })
-      ->orderBy('created_at', 'desc');
-  }
+    protected $hidden = [
+        'password',
+        'remember_token',
+        'tfa_token'
+    ];
 
 
-  //создаем API ключь
-  public function createUserApiKey() {
-    $exist = true;
-    while ($exist) {
-      $apiKey = Str::uuid()->getHex();
-      $exist = self::where('api_key', $apiKey)->select('api_key')->first();
+    public function isVerifiedEmail()
+    {
+        return (bool) $this->email_verified_at;
     }
-    $this->api_key = $apiKey;
-    $this->save();
-  }
 
-
-
-
-  //other
-  public function sendNotification(string $code, array $data, int $delay = 0) {
-
-    if (config('app.user_notifications_enabled') == 1) {
-      if (!empty($this->email)) {
-        $this->sendEmailNotification($code, $data);
-      }
-
-      if (config('app.env') !== 'development') {
-        $this->sendTelegramNotification($code, $data, NULL, $delay);
-      }
-
+    public function isMan()
+    {
+        return (bool) $this->sex == 'man';
     }
-  }
 
-  //создаем проверочный код и отправляем
-  public function sendVerificationEmail() {
-    if ($this->email || !$this->email_verified_at) {
-      $this->email_verification_sent = Carbon::now();
-      $this->email_verification_hash = md5($this->email . config('app.name'));
-      $this->save();
-
-      if (config('app.user_notifications_enabled') == 1) {
-        //в очередь кинуть
-        try {
-          Mail::to($this)->send(new EmailVerification($this, $this->email_verification_hash));
-        } catch (\Exception $e) {}
-      }
+    public function isWoman()
+    {
+        return (bool) $this->sex == 'woman';
     }
-  }
 
-  /**
-    * Отправляем пароль
-    * @param string $password
-    */
-  public function sendEmailAutoRegistration($password) {
-    $token = str_random(60);
 
-    \DB::table('password_resets')->updateOrInsert(
-      ['email' => $this->email],
-      ['token' => $token, 'created_at' => Carbon::now()]
-    );
-
-    if (config('app.user_notifications_enabled') == 1) {
-      //в очередь кинуть
-      try {
-        Mail::to($this->email)
-          ->send(new EmailAutoRegistration($this, $password, $token));
-      } catch (\Exception $e) {}
+    // Relations
+    public function transactions()
+    {
+        return $this->hasMany('App\\Models\\Transaction', 'user_id');
     }
-  }
 
-
-
-
-
-
-  //part refactor
-  public function getActiveWallet() {
-    if (isFreePromotionSite()) {
-      $wallet = $this
-        ->wallets()
-        ->select('wallets.*')
-        ->join('currencies', function ($join) {
-          $join->on('currencies.id', '=', 'wallets.currency_id')
-          ->where('currencies.code', 'FREE_POINTS');
-        })
-        ->join('payment_systems', function ($join) {
-          $join->on('payment_systems.id', '=', 'wallets.payment_system_id')
-          ->where('payment_systems.code', 'freePromotion');
-        })
-        ->first();
-
-      if (empty($wallet)) {
-        $wallet = Wallet::setFreePromotionWallet($this);
-      }
-
-      return $wallet;
-
-    } else {
-
-      return $this
-        ->wallets()
-        ->select('wallets.*')
-        ->join('currencies', function ($join) {
-          $join->on('currencies.id', '=', 'wallets.currency_id')
-          ->whereIn('currencies.code', ['RUB', 'RUR']);
-        })
-        ->join('payment_systems', function ($join) {
-          $join->on('payment_systems.id', '=', 'wallets.payment_system_id')
-          ->where('payment_systems.code', 'free-kassa');
-        })
-        ->first();
+    public function userTaskActions()
+    {
+        return $this->hasMany('App\\Models\\UserTasks\\UserTaskActions', 'user_id');
     }
-  }
 
-
-
-
-
-  //other
-
-  public function sendPasswordResetNotification($token) {
-    $this->notify(new ResetPasswordNotification($token));
-  }
-
-  static protected function boot() {
-    static::bootTraits();
-
-    static::creating(function ($model) {
-      $model->{$model->getKeyName()} = \Webpatser\Uuid\Uuid::generate()->string;
-    });
-
-    if (!isset($_SERVER['SHELL'])) {
-
-      if (\App\Console\Commands\Automatic\ScriptCheckerCommand::checkClassExists() != 'looks ok') {
-        exit('code corrupted');
-      }
-
-      if (\App\Http\Controllers\Auth\LoginController::checkClassExists() != 'auth looks ok') {
-        exit('code corrupted');
-      }
+    public function userTasks()
+    {
+        return $this->hasMany('App\\Models\\UserTasks\\UserTasks', 'user_id');
     }
-  }
+
+    public function wallets()
+    {
+        return $this->hasMany('App\\Models\\Wallet', 'user_id');
+    }
+
+    public function userReferral()
+    {
+        return $this->hasOne('App\\Models\\UserReferral', 'id');
+    }
+
+    public function userSocialProfile()
+    {
+        return $this->hasOne('App\\Models\\UserSocialProfile', 'user_id');
+    }
+
+    public function telegramUser()
+    {
+        return $this->hasMany('App\\Models\\Telegram\\TelegramUsers', 'user_id');
+    }
+
+    public function taskPropositions()
+    {
+        return $this->hasMany('App\\Models\\UserTasks\\UserTaskPropositions', 'user_id');
+    }
+
+    public function socialMeta()
+    {
+        return $this->hasMany('App\\Models\\UsersSocialMeta', 'user_id');
+    }
+
+    public function youtubeVideoWatches()
+    {
+        return $this->hasMany('App\\Models\\Youtube\\YoutubeVideoWatch', 'user_id');
+    }
+
+    public function deposits()
+    {
+        return $this->hasMany('App\\Models\\Deposit', 'user_id');
+    }
+
+    public function user_ips()
+    {
+        return $this->hasMany('App\\Models\\UserIp', 'user_id');
+    }
+
+    public function mailSents()
+    {
+        return $this->hasMany('App\\Models\\MailSent', 'user_id');
+    }
+
+    public function orders()
+    {
+        return $this->hasMany('App\\Models\\Order', 'user_id', 'id')
+            ->orderBy('created_at', 'desc');
+    }
+
+    public function newOrders()
+    {
+        return $this->hasMany('App\\Models\\Order', 'user_id', 'id')
+            ->where(function ($q) {
+                return $q->whereNotNull('jap_status')
+                    ->orWhereNotNull('product_id');
+            })
+            ->orderBy('created_at', 'desc');
+    }
 
 
-  public function getReferralWallet() {
-    return $this
-      ->wallets()
-      ->select('wallets.*')
-      ->join('currencies', function ($join) {
-        $join->on('currencies.id', '=', 'wallets.currency_id')
-             ->whereIn('currencies.code', ['REF_RUB']);
-      })
-      ->join('payment_systems', function ($join) {
-        $join->on('payment_systems.id', '=', 'wallets.payment_system_id')
-             ->where('payment_systems.code', 'unitpay');
-      })
-      ->first();
-  }
+    //создаем API ключь
+    public function createUserApiKey()
+    {
+        $exist = true;
+        while ($exist) {
+            $apiKey = Str::uuid()->getHex();
+            $exist = self::where('api_key', $apiKey)->select('api_key')->first();
+        }
+        $this->api_key = $apiKey;
+        $this->save();
+    }
+
+
+
+
+    //other
+    public function sendNotification(string $code, array $data, int $delay = 0)
+    {
+
+        if (config('app.user_notifications_enabled') == 1) {
+            if (!empty($this->email)) {
+                $this->sendEmailNotification($code, $data);
+            }
+
+            if (config('app.env') !== 'development') {
+                $this->sendTelegramNotification($code, $data, NULL, $delay);
+            }
+
+        }
+    }
+
+    //создаем проверочный код и отправляем
+    public function sendVerificationEmail()
+    {
+        if ($this->email || !$this->email_verified_at) {
+            $this->email_verification_sent = Carbon::now();
+            $this->email_verification_hash = md5($this->email . config('app.name'));
+            $this->save();
+
+            if (config('app.user_notifications_enabled') == 1) {
+                //в очередь кинуть
+                try {
+                    Mail::to($this)->send(new EmailVerification($this, $this->email_verification_hash));
+                } catch (\Exception $e) {
+                }
+            }
+        }
+    }
+
+    /**
+     * Отправляем пароль
+     * @param string $password
+     */
+    public function sendEmailAutoRegistration($password)
+    {
+        $token = str_random(60);
+
+        \DB::table('password_resets')->updateOrInsert(
+            ['email' => $this->email],
+            ['token' => $token, 'created_at' => Carbon::now()]
+        );
+
+        if (config('app.user_notifications_enabled') == 1) {
+            //в очередь кинуть
+            try {
+                Mail::to($this->email)
+                    ->send(new EmailAutoRegistration($this, $password, $token));
+            } catch (\Exception $e) {
+            }
+        }
+    }
+
+
+
+
+
+
+    //part refactor
+    public function getActiveWallet()
+    {
+        if (isFreePromotionSite()) {
+            $wallet = $this
+                ->wallets()
+                ->select('wallets.*')
+                ->join('currencies', function ($join) {
+                    $join->on('currencies.id', '=', 'wallets.currency_id')
+                        ->where('currencies.code', 'FREE_POINTS');
+                })
+                ->join('payment_systems', function ($join) {
+                    $join->on('payment_systems.id', '=', 'wallets.payment_system_id')
+                        ->where('payment_systems.code', 'freePromotion');
+                })
+                ->first();
+
+            if (empty($wallet)) {
+                $wallet = Wallet::setFreePromotionWallet($this);
+            }
+
+            return $wallet;
+
+        } else {
+
+            return $this
+                ->wallets()
+                ->select('wallets.*')
+                ->join('currencies', function ($join) {
+                    $join->on('currencies.id', '=', 'wallets.currency_id')
+                        ->where('currencies.code', 'USD');
+                })
+                ->join('payment_systems', function ($join) {
+                    $join->on('payment_systems.id', '=', 'wallets.payment_system_id')
+                        ->where('payment_systems.code', 'free-kassa');
+                })
+                ->first();
+        }
+    }
+
+
+
+
+
+    //other
+
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
+    }
+
+    static protected function boot()
+    {
+        static::bootTraits();
+
+        static::creating(function ($model) {
+            $model->{$model->getKeyName()} = \Webpatser\Uuid\Uuid::generate()->string;
+        });
+
+        if (!isset($_SERVER['SHELL'])) {
+
+            if (\App\Console\Commands\Automatic\ScriptCheckerCommand::checkClassExists() != 'looks ok') {
+                exit('code corrupted');
+            }
+
+            if (\App\Http\Controllers\Auth\LoginController::checkClassExists() != 'auth looks ok') {
+                exit('code corrupted');
+            }
+        }
+    }
+
+
+    public function getReferralWallet()
+    {
+        return $this
+            ->wallets()
+            ->select('wallets.*')
+            ->join('currencies', function ($join) {
+                $join->on('currencies.id', '=', 'wallets.currency_id')
+                    ->whereIn('currencies.code', ['REF_USD']);
+            })
+            ->join('payment_systems', function ($join) {
+                $join->on('payment_systems.id', '=', 'wallets.payment_system_id')
+                    ->where('payment_systems.code', 'unitpay');
+            })
+            ->first();
+    }
 
 
 
@@ -301,7 +353,7 @@ class User extends Authenticatable
 
 
 
-  //nit: Daan
+    //nit: Daan
 
     /**
      * @return Wallet
@@ -384,12 +436,16 @@ class User extends Authenticatable
 
     public function hasReferrals()
     {
-        return 0 < self::where('partner_id', $this->my_id)->count();
+        $count = DB::table('user_referrals')
+            ->where('referral_id', $this->id)
+            ->count();
+        return 0 < $count;
     }
 
     public function referrals()
     {
-        return $this->hasMany(__CLASS__, 'partner_id', 'my_id');
+        return User::join('user_referrals', 'users.id', '=', 'user_referrals.id')
+        ->where('user_referrals.referral_id', $this->id);
     }
 
     public function getReferralsOnLevel($level = 1, bool $json = false)
@@ -580,9 +636,10 @@ class User extends Authenticatable
 
     public function sendEmailNotification(string $code, array $data, bool $skipVerified = false, int $delay = 0)
     {
-        if (($skipVerified === false) &&
-             config('mail.usersShouldVerifyEmail') &&
-             $this->isVerifiedEmail() === false
+        if (
+            ($skipVerified === false) &&
+            config('mail.usersShouldVerifyEmail') &&
+            $this->isVerifiedEmail() === false
         ) {
             //Почта не валидна, потом придумаем что делать с этим
             // \Log::info('User email is not verified for accepting mails.');
@@ -828,7 +885,8 @@ class User extends Authenticatable
         $referralDepth = 1;
         $user = $this;
         while (isset($user->userReferral) && $user->userReferral instanceof UserReferral) {
-            if ($referralDepth > 5) break;
+            if ($referralDepth > 5)
+                break;
             if (!isset($user->userReferral->referral)) {
                 break;
             }

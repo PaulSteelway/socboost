@@ -28,7 +28,7 @@
             </div>
 
             <div class="offer-card__price">
-              {{ $package_price }}  {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+              {{ $package_price }}  $
             </div>
 
             <div class="offer-card__btn-container">

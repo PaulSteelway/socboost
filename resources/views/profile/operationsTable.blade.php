@@ -140,7 +140,7 @@
                                             <tr class="history__tr">
                                                 <td class="history__td">{{$order->name}}</td>
                                                 <td class="history__td">{{ $order->quantity }}
-                                                    / {{ socialboosterPriceByAmount($order->price) }}  {{ app()->getLocale() == 'en' ? '$' : '₽' }}</td>
+                                                    / {{ socialboosterPriceByAmount($order->price) }}  $</td>
                                                 <td class="history__td" style="max-width:250px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">
                                                     @if(empty($order->link))
                                                         -

@@ -25,7 +25,7 @@
         <div class="label-name col-md-4">{{ __("Price / 1:") }}</div>
         <div class="col-md-8 priceOne">
             <span id="price_base"></span>
-            {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+            $
         </div>
     </div>
 

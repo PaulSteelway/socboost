@@ -20,7 +20,7 @@
                 <div id="slider2">
                     <div id="custom-handle-2" class="ui-slider-handle"></div>
                 </div>
-                <span>{{number_format(socialboosterPriceByAmount(500000), 2, '.', '')}}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</span>
+                <span>{{number_format(socialboosterPriceByAmount(500000), 2, '.', '')}}$</span>
             </div>
         </div>
     </div>

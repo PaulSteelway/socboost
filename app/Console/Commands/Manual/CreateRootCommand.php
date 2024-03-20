@@ -100,7 +100,7 @@ class CreateRootCommand extends Command
 
         while ($exist) {
           $my_id = mt_rand();
-          $exist = \App\Models\User::where('my_id', $myId)->first();
+          $exist = \App\Models\User::where('my_id', $my_id)->first();
         }
 
         $user = \App\Models\User::create([

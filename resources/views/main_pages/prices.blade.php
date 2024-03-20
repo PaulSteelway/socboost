@@ -87,7 +87,7 @@
                                         <td class="prices__td prices__td--right">
                                             <table class="prices__table prices__table--right">
                                                 <tr class="prices__tr">
-                                                    <td class="prices__td">{{number_format(socialboosterPriceByAmount($package->price  * 1000), 2, '.', '')}}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</td>
+                                                    <td class="prices__td">{{number_format(socialboosterPriceByAmount($package->price  * 1000), 2, '.', '')}}$</td>
                                                     <td class="prices__td">{!! app()->getLocale() == 'en'
                                                         ? $package->icon_subtitle4
                                                         : $package->icon_subtitle4_ru

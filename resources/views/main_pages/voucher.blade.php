@@ -31,9 +31,9 @@
                                     {{ csrf_field() }}
                                     <input type="hidden" name="voucher_id" value="{{$key}}">
                                     <div class="voucher-offer__spent">{{__('You will get on balance')}}:</div>
-                                    <div class="voucher-offer__discount">{{number_format(socialboosterPriceByAmount($voucher['price']), 2, '.', '')}} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                                    <div class="voucher-offer__discount">{{number_format(socialboosterPriceByAmount($voucher['price']), 2, '.', '')}} $</div>
                                     <div class="voucher-offer__spent">{{__('Voucher price')}}:</div>
-                                    <div class="voucher-offer__spent-amount">{{__('for')}} {{number_format(socialboosterPriceByAmount($voucher['offer']), 2, '.', '')}} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                                    <div class="voucher-offer__spent-amount">{{__('for')}} {{number_format(socialboosterPriceByAmount($voucher['offer']), 2, '.', '')}} $</div>
                                     <div class="voucher-offer__btn-container">
                                         <button type="submit" class="voucher-offer__btn">{{__('Buy')}}</button>
                                     </div>

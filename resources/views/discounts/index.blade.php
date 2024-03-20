@@ -30,89 +30,89 @@
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 1%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(1000), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(1000), 2, '.', '') }} $</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 3%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(3000), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(3000), 2, '.', '') }} $</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 5%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(5000), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(5000), 2, '.', '') }} $</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 7%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(10000), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(10000), 2, '.', '') }} $</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 10%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(25000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(25000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 12%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(50000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(50000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 15%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(100000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(100000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 18%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(200000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(200000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 21%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(350000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(350000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 24%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(500000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(500000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 27%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(750000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(750000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col-6 col-lg-3">
                         <div class="partner-tariff">
                             <div class="partner-tariff__discount">{{__('Discount')}}: 30%</div>
                             <div class="partner-tariff__spent">{{__('Spent in service')}}:</div>
-                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(150000000), 2, '.', '') }}{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                            <div class="partner-tariff__spent-amount">{{__('From')}} {{ number_format(socialboosterPriceByAmount(150000000), 2, '.', '') }}$</div>
                         </div>
                     </div>
                     <div class="col">
                         <p class="partner-tariffs__text partner-tariffs__text--bold">{{__('When you reach a new discount tariff plan, you will be transferred to the next discount group of discounts automatically')}}!</p>
-                        <p class="partner-tariffs__text">*{{__('By a discount is meant an automatic reduction of the indicated amount to pay for all services on the service')}}. <b>{{__('Suppose a certain service you have chosen costs')}} {{ number_format(socialboosterPriceByAmount(5000), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}</b>, {{__('with the “Reseller-10” tariff plan you only need to pay')}} <b> {{ number_format(socialboosterPriceByAmount(4500), 2, '.', '') }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}.</b></p>
+                        <p class="partner-tariffs__text">*{{__('By a discount is meant an automatic reduction of the indicated amount to pay for all services on the service')}}. <b>{{__('Suppose a certain service you have chosen costs')}} {{ number_format(socialboosterPriceByAmount(5000), 2, '.', '') }} $</b>, {{__('with the “Reseller-10” tariff plan you only need to pay')}} <b> {{ number_format(socialboosterPriceByAmount(4500), 2, '.', '') }} $.</b></p>
                     </div>
                 </div>
             </div>

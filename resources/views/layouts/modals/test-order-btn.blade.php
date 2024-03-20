@@ -39,7 +39,7 @@
 
             <div class="current-service__block-right">
               <span id="packagePricePlan">0</span>
-              {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+              $
             </div>
           </div>
 

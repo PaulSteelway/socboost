@@ -1,4 +1,5 @@
 <?php
+            
 
 /**
  * Copyright. "Hyipium" engine. All rights reserved.
@@ -13,7 +14,8 @@ $boosterRoutes = function() {
 
 
         Route::group(['middleware' => ['site.status']], function () {
-
+            Route::get('/quickorder', 'QuickOrderController@index')->name('quickOrder.main');
+            Route::get('/quickorder/{id}', 'QuickOrderController@show')->name('quickOrder.show');
             // Not authorized
             Route::get('/', 'Customer\MainController@index')->name('customer.main');
             Route::get('/about', 'Customer\MainController@about')->name('customer.about');

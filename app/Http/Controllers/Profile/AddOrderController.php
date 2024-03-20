@@ -327,7 +327,7 @@ class AddOrderController extends Controller
         }
 
 
-        $currency = Currency::whereIn('code', ['RUB', 'RUR'])->first();
+        $currency = Currency::where('code', 'USD')->first();
         $paymentSystem = PaymentSystem::where('code', 'free-kassa')->first();
 
         if (null == $currency || null == $paymentSystem) {

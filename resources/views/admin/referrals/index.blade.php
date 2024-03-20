@@ -73,37 +73,7 @@
             </section>
             <!-- /tile -->
             <!-- Debug Info -->
-            <div class="row">
-                <div class="col-md-12">
-                    <section class="tile tile-simple">
-                        <div class="tile-header dvd dvd-btm">
-                            <h1 class="custom-font">{{ __('Users on same IP') }}:</h1>
-                        </div>
-                        <div class="tile-body">
-                            <table id="duplicates" class="table hover form-inline dt-bootstrap no-footer">
-                                <thead>
-                                <tr>
-                                    <th>{{ __('IP') }}</th>
-                                    <th>{{ __('Email') }}</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                @foreach(\App\Models\UserIp::manyOnIp() as $item)
-                                    <tr>
-                                        <td>{{ $item->ip }}</td>
-                                        <td>{{ $item->user->email }}</td>
-                                    </tr>
-                                @endforeach
-                                </tbody>
-                            </table>
-                            @push('load-scripts')
-                                <script>
-                                    $('#duplicates').DataTable();
-                                </script>
-                            @endpush
-                        </div>
-                    </section>
-                </div>
+            
             </div>
             <!-- /Debug Info -->
 

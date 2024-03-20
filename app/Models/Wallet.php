@@ -68,7 +68,7 @@ class Wallet extends Model
         ->select('id')
         ->first();
     } else {
-      $currency = Currency::where('code', 'RUR')
+      $currency = Currency::where('code', 'USD')
         ->select('id')
         ->first();
       $paymentSystem = PaymentSystem::where('code', 'free-kassa')

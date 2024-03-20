@@ -52,6 +52,7 @@ html.menu-opened body {
 /* line 20, src/sass/main.scss */
 body {
   margin: 0;
+  font-family: 'Open Sans';
 }
 
 select {
@@ -156,7 +157,7 @@ option {
 /*.select2-container--default .select2-selection--single .select2-selection__arrow b {*/
 /*-webkit-transform: translateY(-50%) rotate(45deg);*/
 /*transform: translateY(-50%) rotate(45deg);*/
-/*border: 2px solid #116C93;*/
+/*border: 2px solid #000;*/
 /*width: 8px;*/
 /*height: 8px;*/
 /*border-top: none;*/
@@ -165,7 +166,7 @@ option {
 
 /* line 82, src/sass/main.scss */
 /*.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {*/
-/*border: 2px solid #116C93;*/
+/*border: 2px solid #000;*/
 /*border-top: none;*/
 /*border-left: none;*/
 /*}*/
@@ -428,7 +429,8 @@ option {
   border-radius: 20px;
   border: solid 1px #ffffff;
   background-color: rgba(255, 255, 255, 0.5);
-  color: #f57656;
+  color: #000;
+  font-family: 'Roboto';
   text-align: center;
   font-size: 14px;
   font-weight: 600;
@@ -442,8 +444,8 @@ option {
 .header__reg-link {
   display: inline-block;
   border-radius: 20px;
-  border: solid 1px #f57656;
-  background-color: #f57656;
+  border: solid 1px #B28F4B;
+  background-color: #B28F4B;
   color: #ffffff;
   text-align: center;
   font-size: 14px;
@@ -510,7 +512,7 @@ option {
 /* line 272, src/sass/main.scss */
 .header__login-link:hover {
   background-color: white;
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 277, src/sass/main.scss */
@@ -547,7 +549,7 @@ option {
 @media (max-width: 991px) {
   /* line 277, src/sass/main.scss */
   .header__bonus {
-    border-top: 1px solid #f67555;
+    border-top: 1px solid #B28F4B;
     background-color: #f3f3f3;
     border-radius: 0;
   }
@@ -612,7 +614,7 @@ option {
 /* line 337, src/sass/main.scss */
 .account-item {
   position: relative;
-  color: #f57656;
+  color: #B28F4B;
   text-decoration: underline;
   text-align: right;
   font-size: 14px;
@@ -718,7 +720,7 @@ option {
 
 /* line 400, src/sass/main.scss */
 .account-submenu__link:hover {
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 408, src/sass/main.scss */
@@ -851,7 +853,7 @@ option {
 
 /* line 479, src/sass/main.scss */
 .main-menu__link:hover {
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 486, src/sass/main.scss */
@@ -922,7 +924,7 @@ option {
   padding-left: 9px;
   width: 242px;
 
-  border-top: 1px solid #f67555;
+  border-top: 1px solid #B28F4B;
 }
 
 @media (min-width: 768px) {
@@ -1092,7 +1094,7 @@ option {
 
 /* line 570, src/sass/main.scss */
 .submenu__link:hover {
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 574, src/sass/main.scss */
@@ -1104,7 +1106,7 @@ option {
   top: 50%;
   width: 10px;
   height: 10px;
-  border: 3px solid #116C93;
+  border: 2px solid #000;
   border-top: none;
   border-left: none;
   border-radius: 3px;
@@ -1129,7 +1131,7 @@ option {
   right: 0;
   height: 1px;
   width: 0;
-  background: #f67555;
+  background: #B28F4B;
   transition: .3s linear;
 }
 
@@ -1217,7 +1219,7 @@ option {
 .main-screen__btn {
   height: 60px;
   border-radius: 30px;
-  background-color: #f67555;
+  background-color: #B28F4B;
   min-width: 230px;
   padding: 15px;
   text-align: center;
@@ -1285,7 +1287,7 @@ option {
 .what-we-do__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 22px;
 }
 
@@ -1374,7 +1376,7 @@ option {
 .our-services__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 19px;
   margin-top: 117px;
 }
@@ -1456,7 +1458,8 @@ option {
   -ms-flex-align: center;
   align-items: center;
   min-height: 62px;
-  padding: 15px;
+  border-width: 100px;
+  // padding: 15px;
   position: relative;
 }
 
@@ -1468,7 +1471,7 @@ option {
   -ms-flex-align: center;
   align-items: center;
   min-height: 62px;
-  padding: 15px;
+  // padding: 15px;
   position: relative;
 }
 
@@ -1479,7 +1482,7 @@ option {
   right: 20px;
   -webkit-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg);
-  border: 2px solid #116C93;
+  border: 2px solid #000;
   width: 8px;
   height: 8px;
   border-top: none;
@@ -1496,7 +1499,7 @@ option {
   right: 20px;
   -webkit-transform: translateY(-50%) rotate(45deg);
   transform: translateY(-50%) rotate(45deg);
-  border: 2px solid #116C93;
+  border: 2px solid #000;
   width: 8px;
   height: 8px;
   border-top: none;
@@ -1513,8 +1516,8 @@ option {
 
 /* line 767, src/sass/main.scss */
 .our-services__accordion-img {
-  width: 24px;
-  height: 24px;
+  // width: 24px;
+  // height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1523,7 +1526,10 @@ option {
   justify-content: center;
   margin-right: 20px;
 }
-
+.our-services__accordion-img img {
+  width: auto;
+  max-width: 64px!important;
+}
 .our-services__accordion-image--colapsed {
   display: none;
 }
@@ -1550,9 +1556,9 @@ option {
 
 /* line 776, src/sass/main.scss */
 .our-services__accordion-link-name {
-  font-size: 14px;
-  font-weight: 500;
-  color: #35414d;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
 }
 
 svg:hover {
@@ -1562,7 +1568,8 @@ svg:hover {
 /* line 790, src/sass/main.scss */
 .our-services__panel-container {
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 32px;
+  overflow: hidden;
   -webkit-box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5);
   box-shadow: 0 2px 4px 0 rgba(231, 231, 231, 0.5);
   border: solid 1px #e8e8e8;
@@ -1645,7 +1652,7 @@ svg:hover {
 
 /* line 841, src/sass/main.scss */
 .our-services__panel-link:hover {
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 844, src/sass/main.scss */
@@ -1662,7 +1669,7 @@ svg:hover {
   right: 23px;
   -webkit-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg);
-  border: 2px solid #116C93;
+  border: 2px solid #000;
   width: 8px;
   height: 8px;
   border-top: none;
@@ -1852,7 +1859,7 @@ svg:hover {
 .subscribe__price {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   text-align: center;
   margin-bottom: 76px;
 }
@@ -1876,7 +1883,7 @@ svg:hover {
 .subscribe__text-title {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
@@ -1995,7 +2002,7 @@ svg:hover {
 
 /* line 1060, src/sass/main.scss */
 .subscribe__service-link:hover {
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 1068, src/sass/main.scss */
@@ -2089,7 +2096,7 @@ svg:hover {
 .smm__subtitle {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 17px;
 }
 
@@ -2115,11 +2122,11 @@ svg:hover {
   height: 50px;
   padding: 15px;
   border-radius: 25px;
-  border: solid 1px #f67555;
+  border: solid 1px #B28F4B;
   background-color: #ffffff;
   font-size: 14px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-right: 13px;
   line-height: 1;
   -webkit-transition: .3s ease-in;
@@ -2138,7 +2145,7 @@ svg:hover {
 /* line 1151, src/sass/main.scss */
 .smm__btn:hover {
   color: #ffffff;
-  background-color: #f67555;
+  background-color: #B28F4B;
 }
 
 /* line 1155, src/sass/main.scss */
@@ -2148,7 +2155,7 @@ svg:hover {
 
 /* line 1158, src/sass/main.scss */
 .smm__btn--red {
-  background: #f67555;
+  background: #B28F4B;
   color: #ffffff;
 }
 
@@ -2273,7 +2280,7 @@ svg:hover {
 .feedbacks__subtitle {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 76px;
   text-align: center;
 }
@@ -2302,7 +2309,7 @@ svg:hover {
 .feedbacks__social-title {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 10px;
 }
 
@@ -2530,7 +2537,7 @@ svg:hover {
 
 /* line 1377, src/sass/main.scss */
 .footer-menu__link:hover {
-  color: #f57656;
+  color: #B28F4B;
 }
 
 /* line 1386, src/sass/main.scss */
@@ -2589,7 +2596,7 @@ svg:hover {
   .service-page__our-services-title {
     margin-bottom: 0;
     font-size: 14px;
-    color: #f67555;
+    color: #B28F4B;
     margin-right: 35px;
   }
 }
@@ -2607,7 +2614,7 @@ svg:hover {
   .ready-acc2__our-services-title {
     margin-bottom: 0;
     font-size: 14px;
-    color: #f67555;
+    color: #B28F4B;
     margin-right: 35px;
   }
 }
@@ -3168,7 +3175,7 @@ svg:hover {
 .current-service__description-title {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 5px;
 }
 
@@ -3204,7 +3211,7 @@ svg:hover {
 .service-details__title {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 7px;
 }
 
@@ -3234,7 +3241,7 @@ svg:hover {
 .service-details__text h1 {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 5px;
 }
 
@@ -3360,7 +3367,7 @@ svg:hover {
 .profile-form__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 42px;
 }
 
@@ -3517,7 +3524,7 @@ svg:hover {
 .balance-form__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 42px;
 }
 
@@ -3721,7 +3728,7 @@ svg:hover {
 
 /* line 1916, src/sass/main.scss */
 .balance-form__btn--promo {
-  color: #f57656;
+  color: #B28F4B;
   text-decoration: underline;
   background: transparent;
   border: none;
@@ -4082,7 +4089,7 @@ svg:hover {
     right: -10px;
     -webkit-transform: translateY(-150%) rotate(45deg);
     transform: translateY(-150%) rotate(45deg);
-    border: 2px solid #116C93;
+    border: 2px solid #000;
     width: 8px;
     height: 8px;
     border-top: none;
@@ -4363,7 +4370,7 @@ svg:hover {
   right: -10px;
   -webkit-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg);
-  border: 2px solid #116C93;
+  border: 2px solid #000;
   width: 8px;
   height: 8px;
   border-top: none;
@@ -4506,7 +4513,7 @@ svg:hover {
   right: 3px;
   -webkit-transform: translateY(-50%) rotate(-45deg);
   transform: translateY(-50%) rotate(-45deg);
-  border: 2px solid #116C93;
+  border: 2px solid #000;
   width: 8px;
   height: 8px;
   border-top: none;
@@ -4559,7 +4566,7 @@ svg:hover {
 .discount__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 43px;
 }
 
@@ -4580,7 +4587,7 @@ svg:hover {
 .discount__subtitle {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 5px;
 }
 
@@ -4601,7 +4608,7 @@ svg:hover {
 
 /* line 2477, src/sass/main.scss */
 .discount__link {
-  color: #116c93;
+  color: #000;
 }
 
 /* line 2482, src/sass/main.scss */
@@ -4622,7 +4629,7 @@ svg:hover {
 .partner-tariffs__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -4764,7 +4771,7 @@ svg:hover {
 .voucher__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 23px;
   padding-top: 49px;
 }
@@ -4805,7 +4812,7 @@ svg:hover {
 .voucher-offers__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -4821,7 +4828,7 @@ svg:hover {
 .voucher-offers__subtitle {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 5px;
 }
 
@@ -5016,7 +5023,7 @@ svg:hover {
 .contacts__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 35px;
 }
 
@@ -5102,7 +5109,7 @@ svg:hover {
 .contact-block__info {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -5111,7 +5118,7 @@ svg:hover {
 .contact-block__info a {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 /* line 2646, src/sass/main.scss */
@@ -5143,7 +5150,7 @@ svg:hover {
 .about-us__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
@@ -5217,7 +5224,7 @@ svg:hover {
 .about-us-contacts__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 35px;
 }
 
@@ -5242,14 +5249,14 @@ svg:hover {
 .about-us-contacts__block-info {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 /* line 2640, src/sass/main.scss */
 .about-us-contacts__block-info a {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 /* line 2646, src/sass/main.scss */
@@ -5334,7 +5341,7 @@ svg:hover {
 .modal-content {
   padding: 58px 86px 38px;
   border: none;
-  border-top: 1px solid #f67555;
+  border-top: 1px solid #B28F4B;
   -webkit-box-shadow: 0 4px 6px 0 rgba(172, 172, 172, 0.5);
   box-shadow: 0 4px 6px 0 rgba(172, 172, 172, 0.5);
   border-radius: 0 0 .3rem .3rem;
@@ -5404,7 +5411,7 @@ svg:hover {
 .modal-title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 @media (max-width: 767px) {
@@ -5829,7 +5836,7 @@ input[type=number] {
 }
 
 .affiliate-program__title {
-  color: #f67555;
+  color: #B28F4B;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
@@ -5890,10 +5897,10 @@ input[type=number] {
   min-width: 200px;
   height: 50px;
   border-radius: 25px;
-  color: #f67555;
+  color: #B28F4B;
   font-size: 14px;
   font-weight: 600;
-  border: solid 1px #f67555;
+  border: solid 1px #B28F4B;
   padding: 0 26px;
   margin-right: 20px;
   background: transparent;
@@ -5914,18 +5921,18 @@ input[type=number] {
 }
 
 .affiliate-program__btn:hover {
-  background-color: #f67555;
+  background-color: #B28F4B;
   color: #ffffff;
 }
 
 .affiliate-program__btn--orange {
-  background-color: #f67555;
+  background-color: #B28F4B;
   color: #ffffff;
 }
 
 .affiliate-program__btn--orange:hover {
   background: transparent;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 .affiliate-program__img {
@@ -6063,7 +6070,7 @@ input[type=number] {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.71;
-  color: #f67555;
+  color: #B28F4B;
   position: relative;
 }
 
@@ -6209,7 +6216,7 @@ input[type=number] {
   height: 350px;
   font-size: 150px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6242,7 +6249,7 @@ input[type=number] {
 .referal-step__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 20px;
 }
 
@@ -6265,7 +6272,7 @@ input[type=number] {
 .reviews__auth {
   font-size: 14px;
   font-weight: 500;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 10px;
 }
 
@@ -6734,7 +6741,7 @@ input[type=number] {
   text-align: center;
   font-size: 24px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-top: 30px;
   margin-bottom: 15px;
 }
@@ -6849,7 +6856,7 @@ input[type=number] {
 .statistic-boost__title {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
@@ -6914,10 +6921,10 @@ input[type=number] {
   padding: 0 16px;
   height: 50px;
   border-radius: 25px;
-  border: solid 1px #f67555;
+  border: solid 1px #B28F4B;
   font-size: 14px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   transition: .3s ease-in;
   margin-right: 20px;
   background: transparent;
@@ -6932,18 +6939,18 @@ input[type=number] {
 }
 
 .statistic-boost__btn:hover {
-  background-color: #f67555;
+  background-color: #B28F4B;
   color: #ffffff;
 }
 
 .statistic-boost__btn--orange {
-  background-color: #f67555;
+  background-color: #B28F4B;
   color: #ffffff;
 }
 
 .statistic-boost__btn--orange:hover {
   background: transparent;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 .subscribe-advantages {
@@ -6987,7 +6994,7 @@ input[type=number] {
 .how-subscribe__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 17px;
   text-align: center;
 }
@@ -7044,7 +7051,7 @@ input[type=number] {
 .how-subscribe__step-number {
   font-size: 60px;
   font-weight: bold;
-  color: #f67555;
+  color: #B28F4B;
   opacity: .25;
   width: 83px;
   text-align: center;
@@ -7060,7 +7067,7 @@ input[type=number] {
 .how-subscribe__step-name {
   font-size: 18px;
   font-weight: 500;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 10px;
 }
 
@@ -7093,7 +7100,7 @@ input[type=number] {
   font-size: 36px;
   font-weight: 600;
   text-align: center;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 57px;
 }
 
@@ -7168,8 +7175,8 @@ input[type=number] {
   min-width: 240px;
   height: 50px;
   border-radius: 25px;
-  background-color: #f67555;
-  border: 1px solid #f67555;
+  background-color: #B28F4B;
+  border: 1px solid #B28F4B;
   color: #ffffff;
   font-size: 14px;
   font-weight: 600;
@@ -7185,7 +7192,7 @@ input[type=number] {
 
 .subscription-business__btn:hover {
   background-color: #ffffff;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 .settings {
@@ -7213,7 +7220,7 @@ input[type=number] {
 .settings__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 22px;
 }
 
@@ -7317,7 +7324,7 @@ input[type=number] {
 .subscribe-all__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   padding-bottom: 81px;
   text-align: center;
 }
@@ -7383,7 +7390,7 @@ input[type=number] {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  border: 7px solid #f67555;
+  border: 7px solid #B28F4B;
   opacity: .12;
   border-radius: 50%;
 }
@@ -7405,7 +7412,7 @@ input[type=number] {
 .subscribe__item-name {
   font-size: 18px;
   font-weight: 500;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 10px;
 }
 
@@ -7480,7 +7487,7 @@ input[type=number] {
 .exclusive__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 17px;
   text-align: center;
 }
@@ -7851,7 +7858,7 @@ input[type=number] {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 @media(max-width: 991px) {
@@ -7876,8 +7883,8 @@ input[type=number] {
   line-height: 50px;
   text-align: center;
   border-radius: 25px;
-  background-color: #f67555;
-  border: 1px solid #f67555;
+  background-color: #B28F4B;
+  border: 1px solid #B28F4B;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -7901,7 +7908,7 @@ input[type=number] {
 }
 
 .app__btn:hover {
-  color: #f67555;
+  color: #B28F4B;
   background: transparent;
 }
 
@@ -7980,7 +7987,7 @@ input[type=number] {
 .ready-acc__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 19px;
   margin-top: 117px;
 }
@@ -8077,7 +8084,7 @@ input[type=number] {
   margin-bottom: 50px;
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-top: 0;
   text-align: center;
 }
@@ -8140,7 +8147,7 @@ input[type=number] {
 .premium-promotion__subtitle {
   font-size: 18px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
@@ -8173,7 +8180,7 @@ input[type=number] {
   font-size: 36px;
   font-weight: 600;
   text-align: center;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 20px;
 }
 
@@ -8205,7 +8212,7 @@ input[type=number] {
 .premium-acc__advantages-name {
   font-size: 18px;
   font-weight: 500;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 10px;
 }
 
@@ -8232,7 +8239,7 @@ input[type=number] {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #f57656;
+  color: #B28F4B;
 }
 
 @media(max-width: 991px) {
@@ -8334,7 +8341,7 @@ input[type=number] {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
-  color: #f67555;
+  color: #B28F4B;
 }
 
 @media (max-width: 991px) {
@@ -8406,8 +8413,8 @@ input[type=number] {
   line-height: 50px;
   text-align: center;
   border-radius: 25px;
-  background-color: #f67555;
-  border: 1px solid #f67555;
+  background-color: #B28F4B;
+  border: 1px solid #B28F4B;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -8422,7 +8429,7 @@ input[type=number] {
 }
 
 .tiktok-course__btn:hover {
-  color: #f67555;
+  color: #B28F4B;
   background: transparent;
 }
 
@@ -8451,7 +8458,7 @@ input[type=number] {
 .tiktok__learn-title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 20px;
 }
 
@@ -8494,7 +8501,7 @@ input[type=number] {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #f67555
+  color: #B28F4B
 }
 
 @media(max-width: 991px) {
@@ -8508,7 +8515,7 @@ input[type=number] {
 .how-much-earn__title {
   font-size: 24px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 20px;
 }
 
@@ -8635,7 +8642,7 @@ input[type=number] {
   }
 
   .how-much-earn__block:last-of-type .ui-widget.ui-widget-content {
-    background-color: #f67555;
+    background-color: #B28F4B;
   }
 
   .ui-widget.ui-widget-content:before,
@@ -8661,12 +8668,12 @@ input[type=number] {
   }
 
   .how-much-earn__block:last-of-type .ui-slider-handle {
-    background-color: #f67555 !important;
+    background-color: #B28F4B !important;
   }
 
   .how-much-earn__block:last-of-type .ui-widget.ui-widget-content:before,
   .how-much-earn__block:last-of-type .ui-widget.ui-widget-content:after {
-    background-color: #f67555;
+    background-color: #B28F4B;
   }
 }
 
@@ -8742,7 +8749,7 @@ input[type=number] {
   font-size: 36px;
   font-weight: 600;
   margin-bottom: 15px;
-  color: #f57656;
+  color: #B28F4B;
 }
 
 @media(max-width: 991px) {
@@ -8766,8 +8773,8 @@ input[type=number] {
   line-height: 50px;
   text-align: center;
   border-radius: 25px;
-  background-color: #f67555;
-  border: 1px solid #f67555;
+  background-color: #B28F4B;
+  border: 1px solid #B28F4B;
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
@@ -8782,7 +8789,7 @@ input[type=number] {
 }
 
 .tiktok__best-offer-btn:hover {
-  color: #f67555;
+  color: #B28F4B;
   background: transparent;
 }
 
@@ -9128,7 +9135,7 @@ input[type=number] {
     right: -10px;
     -webkit-transform: translateY(-150%) rotate(45deg);
     transform: translateY(-150%) rotate(45deg);
-    border: 2px solid #116C93;
+    border: 2px solid #000;
     width: 8px;
     height: 8px;
     border-top: none;
@@ -9315,14 +9322,14 @@ input[type=number] {
 .public-offer__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
 .public-offer__subtitle {
   font-size: 24px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
@@ -9517,7 +9524,7 @@ input[type=number] {
 .privacy-policy__subtitle {
   font-size: 24px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-bottom: 12px;
 }
 
@@ -9545,7 +9552,7 @@ input[type=number] {
   line-height: 1;
   font-size: 24px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 30px;
 }
 
@@ -9570,7 +9577,7 @@ input[type=number] {
 }
 
 .privacy-policy__text span {
-  color: #116c93;
+  color: #000;
 }
 
 .privacy-policy__img {
@@ -9601,7 +9608,7 @@ input[type=number] {
 .privacy-policy-text__title {
   font-size: 16px;
   font-weight: 600;
-  color: #f67555;
+  color: #B28F4B;
   margin-top: 50px;
   margin-bottom: 0;
   line-height: 1;
@@ -9700,7 +9707,7 @@ input[type=number] {
 .buy-ready-acc__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 15px;
 }
 
@@ -9781,7 +9788,7 @@ input[type=number] {
 .special-offers__title {
   font-size: 36px;
   font-weight: 600;
-  color: #f57656;
+  color: #B28F4B;
   margin-bottom: 15px;
 }
 
@@ -9902,11 +9909,11 @@ input[type=number] {
 .balance-form__btn--sum_select {
   min-width: 75px;
   border-radius: 25px;
-  //background-color:  #f57656;
+  //background-color:  #B28F4B;
   background-color: rgba(245, 118, 86, 0.4);
   //opacity: 0.4;
   border: none;
-  color: #f57656;;
+  color: #B28F4B;;
   font-size: 14px;
   font-weight: 500;
   height: 40px;
@@ -10035,7 +10042,7 @@ input[type=number] {
   height: 55px;
   border-radius: 25px;
   border: none;
-  color: #f67555;
+  color: #B28F4B;
   background-color: #ffffff;
   text-align: center;
   line-height: 55px;

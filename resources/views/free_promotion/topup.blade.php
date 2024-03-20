@@ -65,7 +65,7 @@
                                             @endif
                                         </div>
                                         <div>
-                                            <span class="help-block-price">{{__('Price in')}} {{ app()->getLocale() == 'en' ? '$' : '₽' }} <span id="point_price"> - {{empty($amount) ? 200 : $amount}}</span></span>
+                                            <span class="help-block-price">{{__('Price in')}} $ <span id="point_price"> - {{empty($amount) ? 200 : $amount}}</span></span>
                                         </div>
 
                                         <div class="balance-form__balance-actions">

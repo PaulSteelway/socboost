@@ -72,7 +72,7 @@ class UserManager
             /** @var Wallet $wallet */
             $wallet = $transaction->user->getActiveWallet();
             Transaction::bonus($wallet, $bonusAmount, $transaction->currency, $transaction->id);
-            $transactionAmount = $transaction->currency->code == 'USD' ? convertUsdToRub($bonusAmount) : $bonusAmount;
+            $transactionAmount = $bonusAmount;
             $wallet->refill($transactionAmount, null);
         }
     }

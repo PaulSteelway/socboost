@@ -26,7 +26,7 @@
               <a href="{{ route('profile.topup') }}">
                 <img src="{{asset('images/currency.png')}}" class="header__bonus-icon">
                 <span class="header__bonus-amount">
-                  {{ null !== $wallet ? number_format(socialboosterPriceByAmount($wallet->balance), 2, '.', '') : 0.00 }} {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                  {{ null !== $wallet ? number_format(socialboosterPriceByAmount($wallet->balance), 2, '.', '') : 0.00 }} $
                 </span>
                 /
                 <span class="header__bonus-percent">

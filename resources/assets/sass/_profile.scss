@@ -1,4 +1,4 @@
-$orange-color: #f67555;
+$orange-color: #B28F4B;
 
 #user_avatar {
   border-radius: 100%;
@@ -293,8 +293,8 @@ $orange-color: #f67555;
 .profile-card__action--link:hover {
   color: #ffffff !important;
   box-shadow: 0 2px 5px 0 rgba(149, 149, 149, 0.5);
-  border: solid 1px #f67555;
-  background-color: #f67555;
+  border: solid 1px #B28F4B;
+  background-color: #B28F4B;
 }
 
 .profile-card {
@@ -316,7 +316,7 @@ $orange-color: #f67555;
     font-size: 18px;
     font-weight: 600;
     text-align: center;
-    color: #f67555;
+    color: #B28F4B;
     margin: 10px;
   }
 
@@ -332,13 +332,13 @@ $orange-color: #f67555;
     text-align: center;
 
     a {
-      border: solid 1px #f67555;
+      border: solid 1px #B28F4B;
       border-radius: 25px;
       padding: 10px 35px;
       font-size: 16px;
       font-weight: 500;
       text-align: center;
-      color: #f67555;
+      color: #B28F4B;
     }
   }
 
@@ -420,20 +420,20 @@ $orange-color: #f67555;
     height: 26px;
     border-radius: 100%;
     border: solid 1px #ffffff;
-    background-color: #f67555;
+    background-color: #B28F4B;
     top: -10px;
-    -webkit-box-shadow: 0 0 3pt 2pt #f67555;
-    box-shadow: 0 0 3pt 2pt #f67555;
+    -webkit-box-shadow: 0 0 3pt 2pt #B28F4B;
+    box-shadow: 0 0 3pt 2pt #B28F4B;
   }
 
   .ui-slider-handle:focus {
-    outline-color: #f67555;
+    outline-color: #B28F4B;
     outline-style: inherit;
   }
 
   .ui-widget-content {
     border: none;
-    background-color: #f67555 !important;
+    background-color: #B28F4B !important;
   }
 
   .ui-slider-range-max {
@@ -446,7 +446,7 @@ $orange-color: #f67555;
   margin-top: 27px;
 
   .ui-widget.ui-widget-content {
-    background-color: #f67555;
+    background-color: #B28F4B;
   }
 
   .ui-widget-content:before {
@@ -460,7 +460,7 @@ $orange-color: #f67555;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 4px;
-    background: #f67555;
+    background: #B28F4B;
   }
 
   .ui-widget-content:after {
@@ -476,7 +476,7 @@ $orange-color: #f67555;
     border: 5px solid #ffffff;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    background: #f67555;
+    background: #B28F4B;
   }
 
 

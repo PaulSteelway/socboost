@@ -2,8 +2,9 @@
 
 <!-- Referral Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('referral_id', __('Referral:')) !!}
-    {!! Form::select('referral_id', $referrals, null, ['class' => 'form-control',  'placeholder' => 'Select referral...']) !!}
+{!! Form::label('referral_id', __('Referral:')) !!}
+{!! Form::text('referral_id', null, ['class' => 'form-control', 'placeholder' => 'Enter referral ID']) !!}
+    
 </div>
 
 <!-- Link Field -->

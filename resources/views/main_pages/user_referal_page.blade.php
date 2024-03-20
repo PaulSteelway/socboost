@@ -23,7 +23,7 @@
                         <img src="/{{$referral_user->avatart ?? 'svg/account-img-new.svg'}}" alt="">
                     </div>
                     <div class="referal-block__text">
-                        {{ $referral_user->name . $referral_user->lastname }} {{__('Invited you and gives')}} {{number_format(socialboosterPriceByAmount(100), 2, '.', '')}} {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                        {{ $referral_user->name . $referral_user->lastname }} {{__('Invited you and gives')}} {{number_format(socialboosterPriceByAmount(100), 2, '.', '')}} $
                         . {{__('In order to receive them, you must register on our website.')}}
                     </div>
                     <a href="#" class="referal-block__btn" data-toggle="modal"

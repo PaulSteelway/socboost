@@ -35,7 +35,7 @@
                     </tr>
                     <tr>
                         <td>
-                            от <span>10 000</span> {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                            от <span>10 000</span> $
                         </td>
                         <td>
                             <strong>+15%</strong> от суммы
@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                         <td>
-                            от <span>30 000</span> {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                            от <span>30 000</span> $
                         </td>
                         <td>
                             <strong>+20%</strong> от суммы
@@ -51,7 +51,7 @@
                     </tr>
                     <tr>
                         <td>
-                            от <span>50 000</span> {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                            от <span>50 000</span> $
                         </td>
                         <td>
                             <strong>+25%</strong> от суммы

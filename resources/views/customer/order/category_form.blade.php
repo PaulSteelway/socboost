@@ -30,12 +30,12 @@
             </div>
             <div class="current-service__block-right" style="display: flex; margin-left: 0">
                 <div class="current-service__price-amount priceOne">
-                    <span id="price_base"></span>{{ app()->getLocale() == 'en' ? '$' : '₽' }}</div>
+                    <span id="price_base"></span>$</div>
                 <div class="current-service__info-price priceOne">
                     <i class="fa fa-info-circle" style="padding-top: 6px"></i>
                     <p class="current-service__info-text">{{__('Price per 1 action')}} <strong><span class="price_info"
-                            ></span> {{ app()->getLocale() == 'en' ? '$' : '₽' }} .</strong> (250 {{__('pcs')}}. =
-                        <strong><span class="price_info_sum"></span> {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                            ></span> $ .</strong> (250 {{__('pcs')}}. =
+                        <strong><span class="price_info_sum"></span> $
                         </strong>)</p>
                 </div>
             </div>
@@ -43,9 +43,9 @@
         <div class="current-service__info-price-mobile priceOne">
             <i class="fa fa-info-circle" style="margin-top: 5px"></i>
             <p class="current-service__info-text">{{__('Price per 1 action')}} <strong><span
-                            class="price_info"></span> {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                            class="price_info"></span> $
                     .</strong> (250 {{__('pcs')}}. =
-                <strong><span class="price_info_sum"></span> {{ app()->getLocale() == 'en' ? '$' : '₽' }}</strong>)</p>
+                <strong><span class="price_info_sum"></span> $</strong>)</p>
         </div>
     @endif
 
@@ -146,11 +146,11 @@
                 @else
                     <span>49</span>
                 @endif
-                <span>{{ app()->getLocale() == 'en' ? '$' : '₽' }}</span>
+                <span>$</span>
                 @auth
                     <div id="discountPrice" style="padding-left: 5px">
                         <em>
-                            <span class="priceAll priceWithDiscount">~</span>{{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                            <span class="priceAll priceWithDiscount">~</span>$
                         </em>
                     </div>
                 @endauth

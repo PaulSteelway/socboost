@@ -1,6 +1,6 @@
 $spacer: 1rem !default;
 $radius: 0 !default;
-
+$trans: 0.5s !default;
 
 
 .vue-modal-resizer {
@@ -102,7 +102,7 @@ $radius: 0 !default;
 .vm-transition {
   &--overlay-enter-active,
   &--overlay-leave-active {
-    transition: all $trans;
+    // transition: all $trans;
   }
 
   &--overlay-enter,

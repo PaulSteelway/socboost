@@ -51,7 +51,7 @@
                     <div id="registration-steps">
                         <div class="complaine-modal">
                             <div class="col-md-6 register-step__info "
-                                 style="background-color: #f67555; opacity: 1">
+                                 style="background-color: #B28F4B; opacity: 1">
                                 <div class="modal_left_sidebar">
                                     <img src="/images/free_promotion/error.png" alt="">
                                     <h1>Пожаловаться на задание</h1>

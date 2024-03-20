@@ -3,12 +3,12 @@
     <div class="price-block col-md-8" style="display: flex; flex-wrap: wrap;">
         <div>
             <span class="priceAll">~</span>
-            <em>{{ app()->getLocale() == 'en' ? '$' : '₽' }}</em>
+            <em>$</em>
         </div>
         @auth
             <div id="discountPrice">
                 <span class="priceAll priceWithDiscount">1500</span>
-                <em class>{{ app()->getLocale() == 'en' ? '$' : '₽' }}</em>
+                <em class>$</em>
             </div>
         @endauth
         <div style="flex-basis: 100%; height: 0;"></div>

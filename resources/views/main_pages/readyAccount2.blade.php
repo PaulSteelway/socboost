@@ -183,7 +183,7 @@
                                                 <hr class="buy-with__item-hr">
                                                 <div class="buy-with__item-price">{{__('for')}}
                                                     {{number_format(socialboosterPriceByAmount($product->price), 2, '.', '')}}
-                                                    {{ app()->getLocale() == 'en' ? '$' : '₽' }}
+                                                    $
                                                 </div>
                                             </div>
                                             @if(!\Auth::guest())

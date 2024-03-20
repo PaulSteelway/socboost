@@ -15,7 +15,7 @@
                                 <img src="images/statistic.png" alt="">
                             </div>
                                 <div class="statistic-boost__text">{{__('We offer additional services on our platform with discount and bonus for your first order!')}}.</div>
-                            <div class="statistic-boost__price">{{__('From')}} {{ number_format(socialboosterPriceByAmount(499), 2, '.', '')}} {{ app()->getLocale() == 'en' ? '$' : '₽' }} / {{__('month')}}</div>
+                            <div class="statistic-boost__price">{{__('From')}} {{ number_format(socialboosterPriceByAmount(499), 2, '.', '')}} $ / {{__('month')}}</div>
                             <div class="statistic-boost__btns">
                                 <button class="statistic-boost__btn statistic-boost__btn--orange">{{__('Subscribe')}}</button>
                                 <button class="statistic-boost__btn">{{__('Compare benefits')}}</button>
